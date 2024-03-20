@@ -1,0 +1,2 @@
+	
+npx insomnia-documenter --config api.json
