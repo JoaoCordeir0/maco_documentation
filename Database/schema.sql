@@ -23,8 +23,9 @@ create table user(
 
 create table course(
 	id int auto_increment primary key,
-    name varchar(255) not null unique,
+    name varchar(255) not null unique,   
     description text,     
+    image varchar(45) not null,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP    
 );
 

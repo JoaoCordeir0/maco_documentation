@@ -1,8 +1,8 @@
 use maco;
 
-insert into course (name, description) values ('Engenharia de software', 'Curso de tecnologia');
-insert into course (name, description) values ('Administração', 'Curso de gerencia');
-insert into course (name, description) values ('Fisioterapia', 'Curso da área da saúde');
+insert into course (name, description, image) values ('Engenharia de software', 'Curso de tecnologia', 'curso_eng_soft.jpg');
+insert into course (name, description, image) values ('Administração', 'Curso de gerencia', 'curso_adm.jpg');
+insert into course (name, description, image) values ('Fisioterapia', 'Curso da área da saúde', 'curso_fisio.jpg');
 
 insert into role (description) values ('Admin');
 insert into role (description) values ('Advisor');
