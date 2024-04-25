@@ -15,10 +15,12 @@ values ('Henrique Magnoli', '12345678900', 'henrique@gmail.com', '21239-5', '$2a
 
 insert into article_status (name, description) values ('Recebido', 'Estado inicial do artigo, quando o autor envia');
 
-insert into article (user, title, authors, advisors, keywords, summary, status)
-values (1, 'Artigo de teste 1', 'João - joaocordeiro2134@gmail.com', 'Revisor teste', 'teste;teste;teste', 'Lorem ipsum', 1);
-insert into article (user, title, authors, advisors, keywords, summary, status)
-values (1, 'Artigo de teste 2', 'Cordeiro - joaocordeiro2134@gmail.com', 'Revisor teste', 'teste;teste;teste', 'Lorem ipsum', 1);
+insert into article (user, course, title, authors, advisors, keywords, summary, status)
+values (1, 1, 'Artigo de teste 1', 'João - joaocordeiro2134@gmail.com', 'Revisor teste', 'teste;teste;teste', 'Lorem ipsum', 1);
+insert into article (user, course, title, authors, advisors, keywords, summary, status)
+values (1, 1, 'Artigo de teste 2', 'Cordeiro - joaocordeiro2134@gmail.com', 'Revisor teste', 'teste;teste;teste', 'Lorem ipsum', 1);
+insert into article (user, course, title, authors, advisors, keywords, summary, status)
+values (1, 3, 'Artigo fisio', 'Henrique - henrique@gmail.com', 'Revisor teste', 'teste;teste;teste', 'Lorem ipsum', 1);
 
 insert into user_course(user, course)
 values (1, 1), (2, 3);

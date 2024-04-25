@@ -47,6 +47,7 @@ create table article_status(
 create table article(
 	id int auto_increment primary key,
     user int not null,
+    course int not null,
     title varchar(255) not null,
     authors varchar(999) not null,
     advisors varchar(999) not null,
@@ -55,5 +56,6 @@ create table article(
     status int not null, 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     foreign key(status) REFERENCES article_status(id),
-    foreign key(user) REFERENCES user(id)
+    foreign key(user) REFERENCES user(id),
+    foreign key(course) REFERENCES course(id)
 );
