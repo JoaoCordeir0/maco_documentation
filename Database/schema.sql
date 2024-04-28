@@ -60,3 +60,13 @@ create table article(
     foreign key(user) REFERENCES user(id),
     foreign key(course) REFERENCES course(id)
 );
+
+create table article_comments(
+	id int auto_increment primary key,
+    user int not null,
+    article int not null,
+    comment text,     
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    foreign key(user) REFERENCES user(id),
+    foreign key(article) REFERENCES article(id)
+);
