@@ -46,21 +46,28 @@ create table article_status(
 );
 
 create table article(
-	id int auto_increment primary key,
-    user int not null,
-    course int not null,
+	id int auto_increment primary key,    
     event int not null,
-    title varchar(255) not null,
-    authors varchar(999) not null,
+    title varchar(255) not null,    
     advisors varchar(999) not null,
+    co_advisors varchar(999),    
     keywords varchar(255) not null,
     summary text not null,
     status int not null, 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    foreign key(status) REFERENCES article_status(id),
-    foreign key(user) REFERENCES user(id),
-    foreign key(course) REFERENCES course(id),
+    foreign key(status) REFERENCES article_status(id),    
     foreign key(event) REFERENCES event_settings(id)
+);
+
+create table article_authors(
+	id int auto_increment primary key, 
+    article int not null,
+	user int not null,
+    course int not null,    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    foreign key(article) REFERENCES article(id),    
+    foreign key(user) REFERENCES user(id),
+    foreign key(course) REFERENCES course(id)
 );
 
 create table article_comments(
