@@ -70,6 +70,16 @@ create table article_authors(
     foreign key(course) REFERENCES course(id)
 );
 
+create table article_advisors(
+	id int auto_increment primary key, 
+    article int not null,
+	user int not null,    
+    is_coadvisor boolean not null,    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    foreign key(article) REFERENCES article(id),    
+    foreign key(user) REFERENCES user(id)    
+);
+
 create table article_comments(
 	id int auto_increment primary key,
     user int not null,
@@ -80,12 +90,19 @@ create table article_comments(
     foreign key(article) REFERENCES article(id)
 );
 
-create table events(
+create table event(
 	id int auto_increment primary key,
     name varchar(255) not null,
     start datetime not null,
     end datetime not null,
     number_characters int,
     status boolean not null,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+create table log(
+	id int auto_increment primary key,
+    log json,
+    area varchar(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
