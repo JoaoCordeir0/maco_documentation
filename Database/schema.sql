@@ -56,7 +56,7 @@ create table article(
     status int not null, 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     foreign key(status) REFERENCES article_status(id),    
-    foreign key(event) REFERENCES event_settings(id)
+    foreign key(event) REFERENCES event(id)
 );
 
 create table article_authors(
