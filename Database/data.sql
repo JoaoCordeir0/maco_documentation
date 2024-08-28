@@ -24,3 +24,7 @@ values (1, 3, 'Artigo fisio', 'Henrique - henrique@gmail.com', 'Revisor teste', 
 
 insert into user_course(user, course)
 values (1, 1), (2, 3);
+
+insert into event (name, start, end, number_characters, number_keywords, instructions, status) values 
+('Evento de teste', '2023-03-29 00:00:00', '2023-05-29 00:00:00', 500, 5, '', 1),
+('Jornada científica UNIFAE 2024', '2024-03-29 00:00:00', '2024-05-29 00:00:00', 500, 5, '', 1)

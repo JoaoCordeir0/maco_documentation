@@ -96,6 +96,8 @@ create table event(
     start datetime not null,
     end datetime not null,
     number_characters int,
+    number_keywords int,
+    instructions text,
     status boolean not null,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
